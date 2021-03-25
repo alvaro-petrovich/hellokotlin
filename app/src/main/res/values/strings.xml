@@ -9,4 +9,5 @@
     <string name="register_title">Register</string>
     <string name="login_title">Login</string>
     <string name="menu_register_save">Save</string>
+    <string name="toast_save_register">Save register</string>
 </resources>
