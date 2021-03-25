@@ -5,4 +5,8 @@
     <string name="ask_register_data">Enter your details to create an account</string>
     <string name="hint_name">Name</string>
     <string name="hint_last_name">Last Name</string>
+    <string name="ask_birthday">Birthday</string>
+    <string name="register_title">Register</string>
+    <string name="login_title">Login</string>
+    <string name="menu_register_save">Save</string>
 </resources>
