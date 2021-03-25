@@ -1,0 +1,8 @@
+<resources>
+  <string name="app_name">HelloKotlin</string>
+  <string name="hello_world">¡Hola Mundo!</string>
+  <string name="ask_name">Ingresa tu nombre</string>
+    <string name="ask_register_data">Ingresa tus datos para crear una cuenta</string>
+  <string name="hint_name">Nombre</string>
+  <string name="hint_last_name">Apellidos</string>
+</resources>
