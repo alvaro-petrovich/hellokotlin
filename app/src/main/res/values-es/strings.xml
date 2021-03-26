@@ -15,4 +15,5 @@
   <string name="password">Contraseña</string>
   <string name="username_error">Usuario inválido</string>
   <string name="password_error">Contraseña incorrecta</string>
+  <string name="call_ws">Consumir Web Service</string>
 </resources>

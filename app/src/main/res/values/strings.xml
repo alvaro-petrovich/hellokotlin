@@ -15,4 +15,5 @@
   <string name="password">Password</string>
   <string name="username_error">Error in username</string>
   <string name="password_error">Invalid password</string>
+  <string name="call_ws">Call Web Service</string>
 </resources>
