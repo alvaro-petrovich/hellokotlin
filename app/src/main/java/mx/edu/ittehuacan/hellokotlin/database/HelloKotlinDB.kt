@@ -4,16 +4,20 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import mx.edu.ittehuacan.hellokotlin.database.daos.PetDAO
 import mx.edu.ittehuacan.hellokotlin.database.daos.UserDAO
+import mx.edu.ittehuacan.hellokotlin.database.entities.Pet
 import mx.edu.ittehuacan.hellokotlin.database.entities.User
 
 @Database(
-  version = 1,
-  entities = [ User::class ]
+  version = 2,
+  entities = [ User::class, Pet::class ]
 )
 abstract class HelloKotlinDB : RoomDatabase() {
 
   abstract fun userDAO(): UserDAO
+
+  abstract fun petDAO(): PetDAO
 
   companion object {
     @Volatile
@@ -30,6 +34,7 @@ abstract class HelloKotlinDB : RoomDatabase() {
           )
             .fallbackToDestructiveMigration()
             .build()
+          INSTANCE = instance
         }
         return instance
       }
