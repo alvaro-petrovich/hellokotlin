@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import mx.edu.ittehuacan.hellokotlin.BaseActivity
 import mx.edu.ittehuacan.hellokotlin.R
 import mx.edu.ittehuacan.hellokotlin.databinding.ActivityRegisterBinding
+import mx.edu.ittehuacan.hellokotlin.main.CentralActivity
 import mx.edu.ittehuacan.hellokotlin.splash.SplashViewModel
 
 class RegisterActivity : BaseActivity() {
@@ -35,6 +36,7 @@ class RegisterActivity : BaseActivity() {
     binding.lifecycleOwner = this
     viewModel.userCreated.observe(this, Observer {
       log( "O User Created: $it" )
+      CentralActivity.start(this)
     })
   }
 
@@ -47,7 +49,7 @@ class RegisterActivity : BaseActivity() {
     if ( item.itemId == R.id.save_register ) {
       Toast.makeText(this, getString(R.string.toast_save_register), Toast.LENGTH_SHORT).show()
       //finish()
-      viewModel.save( binding.textInputName.text.toString(), binding.textInputLastName.text.toString() )
+      viewModel.save( binding.textUsername.text.toString(), binding.textInputLastName.text.toString() )
       return true
     }
     return super.onOptionsItemSelected(item)

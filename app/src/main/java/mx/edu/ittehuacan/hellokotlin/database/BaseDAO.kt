@@ -1,18 +1,20 @@
 package mx.edu.ittehuacan.hellokotlin.database
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Update
+import androidx.room.*
+import mx.edu.ittehuacan.hellokotlin.database.entities.User
 
 @Dao
 abstract class BaseDAO<T> {
   @Insert
-  abstract suspend fun insert(user: T)
+  abstract suspend fun insert( entity: T)
 
   @Delete
-  abstract suspend fun delete( user: T)
+  abstract suspend fun delete( entity: T)
 
   @Update
-  abstract suspend fun update( user: T)
+  abstract suspend fun update( entity: T)
+
+  @Insert(onConflict = OnConflictStrategy.REPLACE)
+  abstract suspend fun save( entity: T)
+
 }

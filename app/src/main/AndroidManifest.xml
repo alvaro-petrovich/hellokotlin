@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mx.edu.ittehuacan.hellokotlin">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,14 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloKotlin">
-        <activity android:name=".register.RegisterActivity"
-            android:label="@string/register_title"></activity>
-        <activity android:name=".login.LoginActivity"
-            android:label="@string/login_title"/>
+        <activity android:name=".main.CentralActivity"></activity>
+        <activity
+            android:name=".register.RegisterActivity"
+            android:label="@string/register_title" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:label="@string/login_title" />
         <activity
             android:name=".splash.SplashActivity"
-            android:theme="@style/MySplashStyle"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/MySplashStyle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

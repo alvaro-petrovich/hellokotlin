@@ -10,4 +10,9 @@
   <string name="login_title">Inicio de sesión</string>
   <string name="menu_register_save">Guardar</string>
     <string name="toast_save_register">Guardar registro</string>
+  <string name="call_fepade">Acúsalo con la FEPADE</string>
+  <string name="username">Nombre de usuario</string>
+  <string name="password">Contraseña</string>
+  <string name="username_error">Usuario inválido</string>
+  <string name="password_error">Contraseña incorrecta</string>
 </resources>

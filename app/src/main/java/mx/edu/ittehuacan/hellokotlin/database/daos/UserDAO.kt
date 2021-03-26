@@ -7,9 +7,6 @@ import mx.edu.ittehuacan.hellokotlin.database.entities.User
 @Dao
 abstract class UserDAO : BaseDAO<User>() {
 
-  @Insert(onConflict = OnConflictStrategy.REPLACE)
-  abstract suspend fun save( user: User )
-
   @Query("SELECT * FROM users")
   abstract suspend fun selectAll(): List<User>
 

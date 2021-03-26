@@ -9,7 +9,7 @@ class RegisterRepository( private val application: Application ) {
 
   suspend fun create( user: User ): Boolean {
     return try {
-      dao.insert( user )
+      dao.save( user )
       true
     } catch ( e: Exception ) {
       e.printStackTrace()
