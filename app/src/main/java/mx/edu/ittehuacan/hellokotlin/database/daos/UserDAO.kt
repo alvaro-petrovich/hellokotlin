@@ -7,21 +7,26 @@ import mx.edu.ittehuacan.hellokotlin.database.entities.User
 interface UserDAO {
 
   @Insert
-  fun insert( user: User )
+  suspend fun insert( user: User )
 
   @Delete
-  fun delete( user: User )
+  suspend fun delete( user: User )
 
   @Update
-  fun update( user: User )
+  suspend fun update( user: User )
 
   @Insert(onConflict = OnConflictStrategy.REPLACE)
-  fun save( user: User )
+  suspend fun save( user: User )
 
   @Query("SELECT * FROM users")
-  fun selectAll(): List<User>
+  suspend fun selectAll(): List<User>
 
   @Query("SELECT * FROM users WHERE user_id = :id")
-  fun selectByID( id: Int )
+  suspend fun selectByID( id: Int ): User
 
+  @Query("SELECT * FROM users WHERE user_name = :name")
+  suspend fun selectByName( name: String ): User
+
+  @Query("SELECT count(1) FROM users")
+  suspend fun count(): Int
 }

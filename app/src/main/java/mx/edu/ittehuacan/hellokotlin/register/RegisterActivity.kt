@@ -17,9 +17,9 @@ class RegisterActivity : BaseActivity() {
     //ActivityLoginBinding.inflate( layoutInflater ).apply { setContentView( root ) }
     val reference = ActivityRegisterBinding.inflate( layoutInflater )
     setContentView( reference.root )
-    reference.textView3
-    reference.textInputName
-    reference.textInputLastName
+//    reference.textView3
+//    reference.textInputName
+//    reference.textInputLastName
     //ActivityMainBinding
     //ActivityLoginBinding
   }

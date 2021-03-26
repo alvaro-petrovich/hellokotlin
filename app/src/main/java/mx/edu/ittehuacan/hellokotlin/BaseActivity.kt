@@ -8,37 +8,41 @@ abstract class BaseActivity : AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    Log.i(localClassName, "onCreate, is new ${savedInstanceState == null}")
+    log("onCreate, is new ${savedInstanceState == null}")
   }
 
   override fun onStart() {
     super.onStart()
-    Log.i(localClassName, "onStart()")
+    log("onStart()")
   }
 
   override fun onRestart() {
     super.onRestart()
-    Log.i(localClassName, "onRestart()")
+    log("onRestart()")
   }
 
   override fun onResume() {
     super.onResume()
-    Log.i(localClassName, "onResume()")
+    log("onResume()")
   }
 
   override fun onPause() {
     super.onPause()
-    Log.i(localClassName, "onPause()")
+    log("onPause()")
   }
 
   override fun onStop() {
     super.onStop()
-    Log.i(localClassName, "onStop()")
+    log("onStop()")
   }
 
   override fun onDestroy() {
     super.onDestroy()
-    Log.i(localClassName, "onDestroy()")
+    log("onDestroy()")
+  }
+
+  protected fun log( message: String ) {
+    Log.i(localClassName, message)
   }
 
 }
